@@ -1,5 +1,6 @@
-# Real laboratory data – never version or deploy
-fixtures/
+# Real laboratory data – never version or deploy (repo-root only;
+# tests/fixtures/synthetic/ holds committed synthetic test data instead)
+/fixtures/
 
 # Dependencies and build output
 node_modules/

@@ -7,12 +7,12 @@ export default defineConfig({
   retries: 0,
   reporter: [['list']],
   use: {
-    baseURL: 'http://127.0.0.1:4173',
+    baseURL: 'http://localhost:4173',
     trace: 'retain-on-failure'
   },
   webServer: {
     command: 'npm run preview -- --port 4173 --strictPort',
-    url: 'http://127.0.0.1:4173',
+    url: 'http://localhost:4173',
     reuseExistingServer: !process.env.CI,
     timeout: 60_000
   },
