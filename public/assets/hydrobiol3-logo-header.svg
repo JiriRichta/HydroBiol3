@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc" viewBox="0 0 920 250" fill="none">
+  <title id="title">HydroBiol3 – logo do hlavičky</title>
+  <desc id="desc">Vektorová sonda přes dvě kulaté vlny, nápis HydroBiol3 v Quicksand.</desc>
+<g transform="translate(-5 0)">
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <!-- Uniform-width, round-capped waves are deliberately behind the probe. -->
+    <path d="M 30 158 C 73 131 100 132 139 155 S 208 177 268 142" stroke="#4BD541" stroke-width="19" />
+    <path d="M 30 193 C 73 166 101 171 140 191 S 211 211 268 177" stroke="#36A5DA" stroke-width="19" />
+    <!-- Probe cable and connector. -->
+    <path d="M 143 77 V 58 C 143 30 161 17 186 17 C 212 17 229 36 229 67" stroke="#0625A2" stroke-width="8"/>
+    <rect x="130" y="70" width="26" height="19" rx="5" fill="#36A5DA" stroke="#0625A2" stroke-width="7"/>
+    <!-- Main sensor body. -->
+    <rect x="115" y="85" width="57" height="117" rx="13" fill="#EAF7FF" stroke="#0625A2" stroke-width="8"/>
+    <path d="M 131 115 H 155 M 131 135 H 155 M 131 155 H 155" stroke="#0625A2" stroke-width="6.5"/>
+    <!-- Lower guard and sensor electrodes. -->
+    <path d="M 121 198 H 166 V 216 C 166 233 156 241 144 241 C 132 241 121 233 121 216 Z" fill="#C9EEFF" stroke="#0625A2" stroke-width="8"/>
+    <path d="M 134 216 V 234 M 153 216 V 234" stroke="#0625A2" stroke-width="6.5"/>
+  </g>
+</g>
+<!-- The wordmark intentionally uses live SVG text: editable; Quicksand is loaded by the application. -->
+<text x="307" y="162" font-family="Quicksand, Comfortaa, sans-serif" font-weight="700" font-size="106" letter-spacing="-2.8" fill="#0625A2"><tspan>HydroBiol</tspan><tspan fill="#4BD541">3</tspan></text>
+</svg>

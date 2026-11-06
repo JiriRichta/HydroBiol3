@@ -1,0 +1,99 @@
+/* HydroBiol3 – Design Tokens v1.0 | desktop-first MVP | no framework required */
+:root {
+  color-scheme: light;
+
+  /* Brand (do not use light green / sky blue for small text on white) */
+  --hb-blue: #0625A2;
+  --hb-blue-hover: #041C81;
+  --hb-sky: #84BCDA;
+  --hb-sky-strong: #36A5DA;
+  --hb-lime: #A1EF8B;
+  --hb-green-brand: #4BD541; /* wordmark & graphics; not body text */
+  --hb-coral: #E68B75; /* decorative contrast; not an error status */
+
+  /* Surfaces and text */
+  --hb-bg: #F7F9FC;
+  --hb-surface: #FFFFFF;
+  --hb-surface-subtle: #F1F6FA;
+  --hb-surface-blue: #EAF5FC;
+  --hb-surface-selection: #E9F9E7;
+  --hb-text: #17283C;
+  --hb-text-secondary: #536477;
+  --hb-text-muted: #6D7E91;
+  --hb-border: #D6E1EB;
+  --hb-border-strong: #ACBBCB;
+
+  /* States / accessibility */
+  --hb-success: #25783A;
+  --hb-warning: #915A00;
+  --hb-danger: #B1323A;
+  --hb-info: #075E91;
+  --hb-focus: #0625A2;
+  --hb-disabled: #8A98A8;
+  --hb-row-hover: #F0F7FC;
+  --hb-row-selected: #E9F9E7;
+  --hb-row-error: #FFF2F1;
+  --hb-editing: #FEF6DB;
+
+  /* Typography – load Quicksand from Google Fonts in index.html. */
+  --hb-font-brand: 'Quicksand', 'Comfortaa', system-ui, sans-serif;
+  --hb-font-data: 'Inter', 'Segoe UI', Arial, sans-serif;
+  --hb-font-size-xs: 12px;
+  --hb-font-size-sm: 13px;
+  --hb-font-size-base: 14px;
+  --hb-font-size-md: 16px;
+  --hb-font-size-lg: 20px;
+  --hb-font-size-xl: 28px;
+
+  /* Geometry / spacing */
+  --hb-radius-xs: 4px;
+  --hb-radius-sm: 6px;
+  --hb-radius-md: 8px;
+  --hb-radius-lg: 12px;
+  --hb-radius-dialog: 14px;
+  --hb-space-1: 4px;
+  --hb-space-2: 8px;
+  --hb-space-3: 12px;
+  --hb-space-4: 16px;
+  --hb-space-5: 20px;
+  --hb-space-6: 24px;
+  --hb-space-8: 32px;
+  --hb-control-height: 34px;
+  --hb-row-height: 36px;
+  --hb-table-header-height: 38px;
+  --hb-outline: 2px solid var(--hb-focus);
+  --hb-shadow-dialog: 0 16px 42px rgba(17, 40, 71, .15);
+}
+
+html { font-size: var(--hb-font-size-base); }
+body { margin: 0; color: var(--hb-text); background: var(--hb-bg); font-family: var(--hb-font-data); }
+h1, h2, h3, .hb-heading, .hb-tab, .hb-button { font-family: var(--hb-font-brand); }
+button, input, select, textarea { font: inherit; }
+:focus-visible { outline: var(--hb-outline); outline-offset: 2px; }
+.hb-button {
+  min-height: var(--hb-control-height); border-radius: var(--hb-radius-sm);
+  border: 1px solid transparent; padding: 6px 14px; font-weight: 700;
+  cursor: pointer; transition: background-color .12s ease;
+}
+.hb-button--primary { background: var(--hb-blue); color: #fff; }
+.hb-button--primary:hover { background: var(--hb-blue-hover); }
+.hb-button--secondary { background: #fff; border-color: var(--hb-border-strong); color: var(--hb-blue); }
+.hb-button:disabled { opacity: .5; cursor: not-allowed; }
+.hb-tabs { display: flex; gap: 2px; border-bottom: 1px solid var(--hb-border); }
+.hb-tab { background: transparent; color: var(--hb-text-secondary); border: 0; border-bottom: 3px solid transparent; padding: 11px 18px; font-size: 14px; font-weight: 700; }
+.hb-tab[aria-selected="true"] { color: var(--hb-blue); background: var(--hb-surface-blue); border-bottom-color: var(--hb-blue); }
+.hb-table-wrap { overflow: auto; background: #fff; border: 1px solid var(--hb-border); border-radius: var(--hb-radius-sm); }
+.hb-data-table { border-collapse: separate; border-spacing: 0; min-width: 100%; font: 13px var(--hb-font-data); font-variant-numeric: tabular-nums; }
+.hb-data-table thead th { position: sticky; top: 0; z-index: 2; height: var(--hb-table-header-height); background: var(--hb-surface-subtle); text-align: left; color: var(--hb-text); border-bottom: 1px solid var(--hb-border); white-space: nowrap; }
+.hb-data-table tbody td { height: var(--hb-row-height); border-bottom: 1px solid var(--hb-border); padding: 0 10px; white-space: nowrap; }
+.hb-data-table tbody tr:hover { background: var(--hb-row-hover); }
+.hb-data-table tbody tr[aria-selected="true"] { background: var(--hb-row-selected); }
+.hb-data-table .hb-cell--editable { background: #F8FCF5; }
+.hb-data-table .hb-cell--editing { background: var(--hb-editing); }
+.hb-data-table .hb-cell--invalid { background: var(--hb-row-error); box-shadow: inset 0 -2px var(--hb-danger); }
+.hb-field { min-height: var(--hb-control-height); box-sizing: border-box; border: 1px solid var(--hb-border-strong); border-radius: var(--hb-radius-sm); background: #fff; padding: 6px 9px; color: var(--hb-text); }
+.hb-status--success { color: var(--hb-success); }
+.hb-status--warning { color: var(--hb-warning); }
+.hb-status--error { color: var(--hb-danger); }
+.hb-status--info { color: var(--hb-info); }
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; } }

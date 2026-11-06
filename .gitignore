@@ -1,0 +1,27 @@
+# Real laboratory data – never version or deploy
+fixtures/
+
+# Dependencies and build output
+node_modules/
+dist/
+coverage/
+test-results/
+playwright-report/
+blob-report/
+.vite/
+
+# Secrets and local overrides
+.env
+.env.*
+*.local
+*.pem
+*.key
+
+# Local exports and OS/editor noise
+*.xlsx
+!tests/fixtures/synthetic/*.xlsx
+local-exports/
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
